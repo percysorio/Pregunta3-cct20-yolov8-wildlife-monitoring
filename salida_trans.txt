@@ -1,0 +1,79 @@
+Ultralytics 8.4.190  Python-3.11.18 torch-2.11.0+cu128 CUDA:0 (NVIDIA GeForce RTX 5050 Laptop GPU, 8151MiB)
+Model summary (fused): 72 layers, 11,131,776 parameters, 0 gradients, 28.5 GFLOPs
+[34m[1mval: [0mFast image access  (ping: 0.0±0.0 ms, read: 1078.5±407.5 MB/s, size: 104.7 KB)
+[K[34m[1mval: [0mScanning C:\Users\PERCY OSORIO\Documents\Maestria Inteligencia Artificial\Ciclo 2\2.-Redes Neuronales y Aprendizaje Profundo\Examen Parcial\Pregunta3\dataset_trans\labels\val... 330 images, 34 backgrounds, 0 corrupt: 19% ━━────────── 330/1725 889.3it/s 0.1s<1.6s[K[34m[1mval: [0mScanning C:\Users\PERCY OSORIO\Documents\Maestria Inteligencia Artificial\Ciclo 2\2.-Redes Neuronales y Aprendizaje Profundo\Examen Parcial\Pregunta3\dataset_trans\labels\val... 693 images, 79 backgrounds, 0 corrupt: 40% ━━━━╸─────── 693/1725 1.6Kit/s 0.2s<0.6s[K[34m[1mval: [0mScanning C:\Users\PERCY OSORIO\Documents\Maestria Inteligencia Artificial\Ciclo 2\2.-Redes Neuronales y Aprendizaje Profundo\Examen Parcial\Pregunta3\dataset_trans\labels\val... 1054 images, 119 backgrounds, 0 corrupt: 61% ━━━━━━━───── 1054/1725 2.1Kit/s 0.3s<0.3s[K[34m[1mval: [0mScanning C:\Users\PERCY OSORIO\Documents\Maestria Inteligencia Artificial\Ciclo 2\2.-Redes Neuronales y Aprendizaje Profundo\Examen Parcial\Pregunta3\dataset_trans\labels\val... 1418 images, 157 backgrounds, 0 corrupt: 82% ━━━━━━━━━╸── 1418/1725 2.5Kit/s 0.4s<0.1s[K[34m[1mval: [0mScanning C:\Users\PERCY OSORIO\Documents\Maestria Inteligencia Artificial\Ciclo 2\2.-Redes Neuronales y Aprendizaje Profundo\Examen Parcial\Pregunta3\dataset_trans\labels\val... 1725 images, 192 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 1725/1725 3.2Kit/s 0.5s
+[34m[1mval: [0mNew cache created: C:\Users\PERCY OSORIO\Documents\Maestria Inteligencia Artificial\Ciclo 2\2.-Redes Neuronales y Aprendizaje Profundo\Examen Parcial\Pregunta3\dataset_trans\labels\val.cache
+Ultralytics 8.4.190  Python-3.11.18 torch-2.11.0+cu128 CUDA:0 (NVIDIA GeForce RTX 5050 Laptop GPU, 8151MiB)
+Model summary (fused): 72 layers, 11,131,776 parameters, 0 gradients, 28.5 GFLOPs
+[34m[1mval: [0mFast image access  (ping: 0.0±0.0 ms, read: 1423.3±224.7 MB/s, size: 98.3 KB)
+[K[34m[1mval: [0mScanning C:\Users\PERCY OSORIO\Documents\Maestria Inteligencia Artificial\Ciclo 2\2.-Redes Neuronales y Aprendizaje Profundo\Examen Parcial\Pregunta3\dataset_trans\labels\val.cache... 1725 images, 192 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 1725/1725  0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 0% ──────────── 0/108  0.0s
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\miniconda\envs\yolo\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\miniconda\envs\yolo\Lib\multiprocessing\spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "C:\miniconda\envs\yolo\Lib\multiprocessing\spawn.py", line 246, in prepare
+    _fixup_main_from_path(data['init_main_from_path'])
+  File "C:\miniconda\envs\yolo\Lib\multiprocessing\spawn.py", line 297, in _fixup_main_from_path
+    main_content = runpy.run_path(main_path,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 291, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\PERCY OSORIO\Documents\Maestria Inteligencia Artificial\Ciclo 2\2.-Redes Neuronales y Aprendizaje Profundo\Examen Parcial\Pregunta3\evaluate_trans.py", line 7, in <module>
+    metrics = model.val(
+              ^^^^^^^^^^
+  File "C:\miniconda\envs\yolo\Lib\site-packages\ultralytics\engine\model.py", line 645, in val
+    validator(model=self.model)
+  File "C:\miniconda\envs\yolo\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\miniconda\envs\yolo\Lib\site-packages\ultralytics\engine\validator.py", line 255, in __call__
+    for batch_i, batch in enumerate(bar):
+  File "C:\miniconda\envs\yolo\Lib\site-packages\ultralytics\utils\tqdm.py", line 379, in __iter__
+    for item in self.iterable:
+  File "C:\miniconda\envs\yolo\Lib\site-packages\ultralytics\data\build.py", line 85, in __iter__
+    self.iterator = self._get_iterator()
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\miniconda\envs\yolo\Lib\site-packages\torch\utils\data\dataloader.py", line 433, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\miniconda\envs\yolo\Lib\site-packages\torch\utils\data\dataloader.py", line 1192, in __init__
+    w.start()
+  File "C:\miniconda\envs\yolo\Lib\multiprocessing\process.py", line 121, in start
+    self._popen = self._Popen(self)
+                  ^^^^^^^^^^^^^^^^^
+  File "C:\miniconda\envs\yolo\Lib\multiprocessing\context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\miniconda\envs\yolo\Lib\multiprocessing\context.py", line 336, in _Popen
+    return Popen(process_obj)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\miniconda\envs\yolo\Lib\multiprocessing\popen_spawn_win32.py", line 46, in __init__
+    prep_data = spawn.get_preparation_data(process_obj._name)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\miniconda\envs\yolo\Lib\multiprocessing\spawn.py", line 164, in get_preparation_data
+    _check_not_importing_main()
+  File "C:\miniconda\envs\yolo\Lib\multiprocessing\spawn.py", line 140, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+
+        To fix this issue, refer to the "Safe importing of main module"
+        section in https://docs.python.org/3/library/multiprocessing.html
+        

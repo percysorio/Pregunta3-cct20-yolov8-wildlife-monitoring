@@ -1,0 +1,13 @@
+dataset_trans/
+dataset_yolo/
+runs/
+weights/
+
+*.pt
+*.pth
+
+__pycache__/
+*.pyc
+
+*.tmp
+*.log
